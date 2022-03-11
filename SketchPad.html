@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SketchPad</title>
+    <link rel="stylesheet" type="text/css" href="SketchPad.css"/>
+    <script type="text/javascript" src="SketchPad.js"></script>
+</head>
+<body>
+
+    <!--Create new grid here for tool bar-->
+    <div class="radio_toolbar">
+        <div class="grid-container">
+            <div class="penStyle">
+                <input type="radio" id="RMarker" name="PenTools" value="Marker">
+                <label for="RMarker"><img src="icons\Marker.jpg" id="Marker" width="25" height="25" /></label>
+
+                <input type="radio" id="Rcaligraphy" name="PenTools" value="caligraphy">
+                <label for="Rcaligraphy"><img src="icons\caligraphy.jpg" id="caligraphy" width="25" height="25"></label>
+
+                <input type="radio" id="ROilBrush" name="PenTools" value="OilBrush">
+                <label for="ROilBrush"><img src="icons\OilBrush.jpg" id="OilBrush" width="25" height="25"></label>
+
+                <input type="radio" id="RWaterColour" name="PenTools" value="WaterColour">
+                <label for="RWaterColour"><img src="icons\WaterColour.jpg" id="WaterColour" width="25" height="25"></label>
+
+                <input type="radio" id="RPixelPen" name="PenTools" value="PixelPen">
+                <label for="RPixelPen"><img src="icons\PixelPen.jpg" id="PixelPen" width="25" height="25"></label>
+
+                <input type="radio" id="RPencil" name="PenTools" value="Pencil">
+                <label for="RPencil"><img src="icons\Pencil.jpg" id="Pencil" width="25" height="25"></label>
+
+                <input type="radio" id="REraser" name="PenTools" value="Eraser">
+                <label for="REraser"><img src="icons\Eraser.jpg" id="Eraser" width="25" height="25" /></label>
+
+                <input type="radio" id="RCrayon" name="PenTools" value="Crayon">
+                <label for="RCrayon"><img src="icons\Crayon.jpg" id="Crayon" width="25" height="25"></label>
+
+                <input type="radio" id="RSprayCan" name="PenTools" value="SprayCan">
+                <label for="RSprayCan"><img src="icons\SprayCan.jpg" id="SprayCan" width="25" height="25"></label>
+
+                <input type="radio" id="RFill" name="PenTools" value="Fill">
+                <label for="RFill"><img src="icons\Fill.jpg" id="Fill" width="25" height="25"></label>
+            </div>
+            <div class="tools">
+                <input type="radio" id="RChalk" name="DrawingTypes" value="Chalk">
+                <label for="RChalk"><img src="icons\chalk.png" id="Chalk" width="25" height="25" /></label>
+
+                <input type="radio" id="RLine" name="DrawingTypes" value="Line">
+                <label for="RLine"><img src="icons\line.png" id="Chalk" width="25" height="25" /></label>
+
+                <input type="radio" id="RRect" name="DrawingTypes" value="Rect">
+                <label for="RRect"><img src="icons\Rectangle.png" id="Rect" width="25" height="25" /></label>
+
+                <input type="radio" id="RCircle" name="DrawingTypes" value="Circle">
+                <label for="RCircle"><img src="icons\Circle.png" id="Circle" width="25" height="25" /></label>
+
+
+                <img src="icons\Linewidth.jpg" id="linewidth" width="25" height="25">
+
+                <input type="range" name="penWidth" id="penWidth" min="1" max="50" value="1">
+            </div>
+            <div class="eraser">Eraser</div>
+            <div class="ruler">Ruler</div>
+            <div class="shapes">Shapes</div>
+            <div class="select">Select</div>
+            <div class="redo">Redo</div>
+            <div class="texttool">Text</div>
+            <div class="undo">Undo</div>
+
+
+
+        </div>
+        <div id="wrapper">
+            <div id="canvasPlaceholder">
+                <p>
+                    <label style="color:black">Pen colour</label>
+                    <input type="color" id="colourPicker" />
+                    <label style="color:black">Fill colour</label>
+                    <input type="color" id="fillPicker" />
+                    <label style="color:black">Gradient Fill</label>
+                    <input type="checkbox" id="gradientfill" />
+                </p>
+                <canvas id="drawingCanvas" height="532" width="897">
+                    <p class="noscript">Sorry, this application is currently not supported.</p>
+                </canvas>
+            </div>
+        </div>
+        <img src="greypen2.png" id="greypen" width="0" height="0">
+    </div>
+</body>
+</html>

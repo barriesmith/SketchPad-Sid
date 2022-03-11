@@ -1,0 +1,152 @@
+﻿* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    color: white;
+    font-family: 'Segoe UI';
+    font-size: 20px;
+}
+
+.button {
+    padding: 1px 2px;
+    font-size: 8px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #fff;
+    border: none;
+}
+
+.button:hover {
+    background-color: #909090;
+    opacity: 50%;
+}
+
+.button:active {
+    background-color: #909090;
+    opacity: 50%;
+}
+
+.button:focus {
+    background-color: #909090;
+    opacity: 50%;
+}
+
+.select {
+    padding: 5px 1px;
+    position:relative;
+    top: 1px;
+}
+
+#wrapper {
+    position:relative;
+    width:960px;
+    margin:0 auto;
+    padding-top:0px;
+}
+
+#canvasPlaceholder {
+    width:924px;
+    height:599px;
+    margin:0 auto;
+    cursor:crosshair;
+}
+
+#drawingCanvas {
+    position: absolute;
+    border:1px;
+    border-color:red;
+    color: #fff;
+    overflow: hidden;
+    background-color: black;
+}
+
+#tempCanvas {
+    position:absolute;
+    width:897px;
+    overflow:hidden;
+    height:532px;
+}
+
+.penStyle {
+    grid-area: penstyle;
+}
+
+.tools {
+    grid-area: tools;
+}
+
+.eraser {
+    grid-area: eraser;
+}
+
+.ruler {
+    grid-area: ruler;
+}
+
+.shapes {
+    grid-area: shapes;
+}
+
+
+.select {
+    grid-area: select;
+}
+
+.texttool {
+    grid-area: texttool;
+}
+
+.redo {
+    grid-area: redo;
+}
+
+.undo {
+    grid-area: undo;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'penstyle penstyle penstyle penstyle penstyle tools tools tools eraser ruler shapes shapes shapes shapes shapes shapes shapes shapes select select redo redo'
+        'penstyle penstyle penstyle penstyle penstyle tools tools tools eraser ruler shapes shapes shapes shapes shapes shapes shapes shapes texttool texttool undo undo';
+    ;
+    grid-column-gap: 1px;
+    grid-column-row: 1px;
+    grid-gap: 1px;
+    box-shadow: 2px 5px #EEEEEE;
+    background-color: #CCCCCC;
+    padding: 2px;
+}
+
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 1);
+    text-align: left;
+    padding: 2px 0;
+    font-size: 10px;
+    color:black;
+}
+
+
+.radio_toolbar input[type="Radio"] {
+    display: none;
+}
+
+.radio_toolbar label {
+    display: inline-block;
+    background-color: #ddd;
+    padding: 2px 2px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.radio_toolbar input[type="radio"]:checked + label {
+    background-color: #bbb;
+}

@@ -82,6 +82,10 @@ if (window.addEventListener) {
             var penWidth_selector = document.getElementById("penWidth");
             penWidth_selector.addEventListener('change', penWidth_changer, false);
 
+            //Create opacity selector
+            var opacity_selector = document.getElementById("opacity");
+            opacity_selector.addEventListener('change', opacity_changer, false);
+
             //Create pen colour selector
             var colorPicker_selector = document.getElementById("colourPicker");
             colorPicker_selector.addEventListener('change', colorPicker_changer, false);
@@ -140,6 +144,10 @@ if (window.addEventListener) {
             context.lineWidth = this.value;
         }
 
+        function opacity_changer(ev) {
+            context.globalAlpha = this.value / 100;
+        }
+
         function colorPicker_changer(ev) {
             context.strokeStyle = this.value;
         }
@@ -175,10 +183,7 @@ if (window.addEventListener) {
             };
             this.mousemove = function (ev) {
                 if (tool.started) {
-                    //var img = document.getElementById("greypen");
-                    //var pat = context.createPattern(img, 'repeat');
-                    //context.strokeStyle = pat;
-                    //context.globalAlpha = 0.2;
+                    context.clearRect(0, 0, canvas.width, canvas.height);
                     context.lineTo(ev._x, ev._y);
                     context.stroke();
                 }
@@ -255,12 +260,9 @@ if (window.addEventListener) {
                 }
                 context.clearRect(0, 0, canvas.width, canvas.height);
                 // Begin the line. 
-
                 context.beginPath();
                 context.moveTo(tool.x0, tool.y0);
                 context.lineTo(ev._x, ev._y);
-                //add line width here
-                //add colour here
                 context.stroke();
                 context.closePath();
             };
